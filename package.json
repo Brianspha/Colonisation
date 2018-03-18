@@ -1,0 +1,16 @@
+{
+  "name": "FifaWorldCup",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "test": "embark test"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {},
+  "dependencies": {
+    "npm": "^5.7.1",
+    "solc": "^0.4.21"
+  }
+}
