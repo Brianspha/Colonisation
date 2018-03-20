@@ -62657,6 +62657,26 @@ __reduce(__mainContext.connectionList,function(prev, value, next) {
 });
 
 
+__mainContext.__loadManagerInstance.execWhenReady(function() {
+  __mainContext.ColonisationInterface = new EmbarkJS.Contract({abi: [{"constant":false,"inputs":[{"name":"buyer","type":"address"},{"name":"amount","type":"uint256"}],"name":"BuyTokens","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"amount","type":"uint256"}],"name":"Transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"country","type":"address"},{"name":"spender","type":"address"}],"name":"Allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"owner","type":"address"}],"name":"GetBalanceOfCountry","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"spender","type":"address"},{"name":"amount","type":"uint256"}],"name":"Approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"amount","type":"uint256"}],"name":"TransferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"TotalColonisationTokens","outputs":[{"name":"total","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"string"}],"name":"LogTokenNameDeclared","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"TransferEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"country","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"Approval","type":"event"}], address: undefined, code: '', gasEstimates: {"creation":{},"external":{},"internal":{}}});
+
+});
+__mainContext.__loadManagerInstance.execWhenReady(function() {
+  __mainContext.CountriesInterFace = new EmbarkJS.Contract({abi: [{"constant":true,"inputs":[{"name":"id","type":"address"}],"name":"GetResource","outputs":[{"name":"name","type":"bytes32"},{"name":"count","type":"uint256"},{"name":"OriginCountry","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"name","type":"bytes32"},{"name":"continent","type":"bytes32"},{"name":"pass","type":"bytes32"}],"name":"RegisterCountry","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"}], address: undefined, code: '', gasEstimates: {"creation":{},"external":{},"internal":{}}});
+
+});
+__mainContext.__loadManagerInstance.execWhenReady(function() {
+  __mainContext.CountryContract = new EmbarkJS.Contract({abi: [{"constant":true,"inputs":[],"name":"Balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"id","type":"address"}],"name":"GetResource","outputs":[{"name":"name","type":"bytes32"},{"name":"count","type":"uint256"},{"name":"origin","type":"bytes32"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"buyer","type":"address"},{"name":"amount","type":"uint256"}],"name":"BuyTokens","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"name","type":"bytes32"},{"name":"continent","type":"bytes32"},{"name":"pass","type":"bytes32"}],"name":"RegisterCountry","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"amount","type":"uint256"}],"name":"Transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"country","type":"address"},{"name":"spender","type":"address"}],"name":"Allowance","outputs":[{"name":"amount","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"country","type":"address"}],"name":"GetBalanceOfCountry","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"Name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"spender","type":"address"},{"name":"amount","type":"uint256"}],"name":"Approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"amount","type":"uint256"}],"name":"TransferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"TotalColonisationTokens","outputs":[{"name":"totalsupply","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"RecievedEther","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":false,"name":"newbalance","type":"uint256"}],"name":"NewEtherBalance","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"string"}],"name":"LogTokenNameDeclared","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"TransferEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"country","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"Approval","type":"event"}], address: undefined, code: '6060604052602060405190810160405260008152600190805161002692916020019061007d565b50600160025560c8600355341561003c57600080fd5b60048054600160a060020a03191633600160a060020a0390811691909117918290556003549116600090815260056020526040812091909155600955610118565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100be57805160ff19168380011785556100eb565b828001600101855582156100eb579182015b828111156100eb5782518255916020019190600101906100d0565b506100f79291506100fb565b5090565b61011591905b808211156100f75760008155600101610101565b90565b6109a9806101276000396000f3006060604052600436106100c45763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ef67887811461017057806318f837e314610195578063313ce567146101d85780634aff2c4e146102015780635c72e8741461022c57806369ca02dd146102485780636dcdd00f1461026a5780637ec377bf1461028f5780638052474d146102ae57806390ec57f11461033857806395d89b411461035a578063c0d84ce51461036d578063c2d7b00214610395575b7f2115fd557368343a79c5fa055e19e2b5c97241cdaea4d5bbee16a2e15ba1ca703334604051600160a060020a03909216825260208201526040908101905180910390a16000805434908101918290557f9a0461af4b66872c71a24989453c7b0d12bd6c19fc0bb8103c0c291c8f31235d913391906040518084600160a060020a0316600160a060020a03168152602001838152602001828152602001935050505060405180910390a1005b341561017b57600080fd5b6101836103a8565b60405190815260200160405180910390f35b34156101a057600080fd5b6101b4600160a060020a03600435166103ae565b60405192835260208301919091526040808301919091526060909101905180910390f35b34156101e357600080fd5b6101eb6103d4565b60405160ff909116815260200160405180910390f35b610218600160a060020a03600435166024356103d9565b604051901515815260200160405180910390f35b341561023757600080fd5b61021860043560243560443561045a565b341561025357600080fd5b610218600160a060020a03600435166024356105e8565b341561027557600080fd5b610183600160a060020a036004358116906024351661068b565b341561029a57600080fd5b610183600160a060020a03600435166106b6565b34156102b957600080fd5b6102c16106d1565b60405160208082528190810183818151815260200191508051906020019080838360005b838110156102fd5780820151838201526020016102e5565b50505050905090810190601f16801561032a5780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b341561034357600080fd5b610218600160a060020a036004351660243561076f565b341561036557600080fd5b6102c16107db565b341561037857600080fd5b610218600160a060020a0360043581169060243516604435610812565b34156103a057600080fd5b61018361093b565b60005481565b600160a060020a03166000908152600b6020526040812080546001909101549092909190565b601281565b6000806003541180156103f157506000826003540310155b1561045057600380548390039055600160a060020a038084166000908152600560205260409081902084905533909116903480156108fc029151600060405180830381858888f19350505050151561044857600080fd5b506001610454565b5060005b92915050565b6000610464610941565b33600160a060020a031660009081526008602052604090206004015474010000000000000000000000000000000000000000900460ff1615156105db5760e06040519081016040908152868252602080830187905260008284018190526060840181905233600160a060020a031660808501819052600160a0860181905260c0860189905260098054820190559082526008909252919091209093509091508190815181556020820151600182015560408201518160020155606082015160038201805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055608082015160048201805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a039290921691909117905560a0820151600482018054911515740100000000000000000000000000000000000000000274ff00000000000000000000000000000000000000001990921691909117905560c0820151600590910155506105e0565b600091505b509392505050565b600160a060020a0333166000908152600560205260408120548290108015906106115750600082115b1561045057600160a060020a0380841660008181526005602052604080822080548701905533841682529081902080548690039055600454919291909116907feaf1c4b3ce0f4f62a2bae7eb3e68225c75f7e6ff4422073b7437b9a78d25f1709085905190815260200160405180910390a3506001610454565b600160a060020a03918216600090815260066020908152604080832093909416825291909152205490565b600160a060020a031660009081526005602052604090205490565b60018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156107675780601f1061073c57610100808354040283529160200191610767565b820191906000526020600020905b81548152906001019060200180831161074a57829003601f168201915b505050505081565b600160a060020a03338116600081815260066020908152604080832094871680845294909152808220859055909291907f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259085905190815260200160405180910390a350600192915050565b60408051908101604052600581527f4669786564000000000000000000000000000000000000000000000000000000602082015281565b600160a060020a0383166000908152600560205260408120548290108015906108625750600160a060020a0380851660009081526006602090815260408083203390941683529290522054829010155b801561086e5750600082115b80156108935750600160a060020a038316600090815260056020526040902054828101115b1561093057600160a060020a0380841660008181526005602081815260408084208054890181558a871680865282862080548b900390556006845282862033909816865296835281852080548a9003905593859052919052815486019091559091907feaf1c4b3ce0f4f62a2bae7eb3e68225c75f7e6ff4422073b7437b9a78d25f1709085905190815260200160405180910390a3506001610934565b5060005b9392505050565b60035490565b60e06040519081016040908152600080835260208301819052908201819052606082018190526080820181905260a0820181905260c0820152905600a165627a7a72305820de0780e8108f478463ffa105f56d9e2e0282b0b4aef2d2377b56c8335439761f0029', gasEstimates: {"creation":[null,494600],"external":{"":23750,"Allowance(address,address)":23444,"Approve(address,uint256)":23444,"Balance()":23444,"BuyTokens(address,uint256)":null,"GetBalanceOfCountry(address)":23444,"GetResource(address)":23444,"Name()":null,"RegisterCountry(bytes32,bytes32,bytes32)":147463,"TotalColonisationTokens()":23444,"Transfer(address,uint256)":43475,"TransferFrom(address,address,uint256)":84841,"decimals()":23444,"symbol()":null},"internal":{}}});
+
+});
+__mainContext.__loadManagerInstance.execWhenReady(function() {
+  __mainContext.LimitedColonisationLicenseToken = new EmbarkJS.Contract({abi: [{"constant":true,"inputs":[],"name":"Balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"buyer","type":"address"},{"name":"amount","type":"uint256"}],"name":"BuyTokens","outputs":[{"name":"success","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function"},{"constant":false,"inputs":[{"name":"to","type":"address"},{"name":"amount","type":"uint256"}],"name":"Transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"name":"country","type":"address"},{"name":"spender","type":"address"}],"name":"Allowance","outputs":[{"name":"amount","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[{"name":"country","type":"address"}],"name":"GetBalanceOfCountry","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"Name","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"spender","type":"address"},{"name":"amount","type":"uint256"}],"name":"Approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"name":"from","type":"address"},{"name":"to","type":"address"},{"name":"amount","type":"uint256"}],"name":"TransferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"TotalColonisationTokens","outputs":[{"name":"totalsupply","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"RecievedEther","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":false,"name":"newbalance","type":"uint256"}],"name":"NewEtherBalance","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"name","type":"string"}],"name":"LogTokenNameDeclared","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"TransferEvent","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"country","type":"address"},{"indexed":true,"name":"spender","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"Approval","type":"event"}], address: undefined, code: '60606040526020604051908101604052600081526001908051610026929160200190610077565b50600160025560c8600355341561003c57600080fd5b60048054600160a060020a03191633600160a060020a0390811691909117918290556003549116600090815260056020526040902055610112565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100b857805160ff19168380011785556100e5565b828001600101855582156100e5579182015b828111156100e55782518255916020019190600101906100ca565b506100f19291506100f5565b5090565b61010f91905b808211156100f157600081556001016100fb565b90565b610744806101216000396000f3006060604052600436106100ae5763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ef67887811461015a578063313ce5671461017f5780634aff2c4e146101a857806369ca02dd146101d35780636dcdd00f146101f55780637ec377bf1461021a5780638052474d1461023957806390ec57f1146102c357806395d89b41146102e5578063c0d84ce5146102f8578063c2d7b00214610320575b7f2115fd557368343a79c5fa055e19e2b5c97241cdaea4d5bbee16a2e15ba1ca703334604051600160a060020a03909216825260208201526040908101905180910390a16000805434908101918290557f9a0461af4b66872c71a24989453c7b0d12bd6c19fc0bb8103c0c291c8f31235d913391906040518084600160a060020a0316600160a060020a03168152602001838152602001828152602001935050505060405180910390a1005b341561016557600080fd5b61016d610333565b60405190815260200160405180910390f35b341561018a57600080fd5b610192610339565b60405160ff909116815260200160405180910390f35b6101bf600160a060020a036004351660243561033e565b604051901515815260200160405180910390f35b34156101de57600080fd5b6101bf600160a060020a03600435166024356103bf565b341561020057600080fd5b61016d600160a060020a0360043581169060243516610462565b341561022557600080fd5b61016d600160a060020a036004351661048d565b341561024457600080fd5b61024c6104a8565b60405160208082528190810183818151815260200191508051906020019080838360005b83811015610288578082015183820152602001610270565b50505050905090810190601f1680156102b55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156102ce57600080fd5b6101bf600160a060020a0360043516602435610546565b34156102f057600080fd5b61024c6105b2565b341561030357600080fd5b6101bf600160a060020a03600435811690602435166044356105e9565b341561032b57600080fd5b61016d610712565b60005481565b601281565b60008060035411801561035657506000826003540310155b156103b557600380548390039055600160a060020a038084166000908152600560205260409081902084905533909116903480156108fc029151600060405180830381858888f1935050505015156103ad57600080fd5b5060016103b9565b5060005b92915050565b600160a060020a0333166000908152600560205260408120548290108015906103e85750600082115b156103b557600160a060020a0380841660008181526005602052604080822080548701905533841682529081902080548690039055600454919291909116907feaf1c4b3ce0f4f62a2bae7eb3e68225c75f7e6ff4422073b7437b9a78d25f1709085905190815260200160405180910390a35060016103b9565b600160a060020a03918216600090815260066020908152604080832093909416825291909152205490565b600160a060020a031660009081526005602052604090205490565b60018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561053e5780601f106105135761010080835404028352916020019161053e565b820191906000526020600020905b81548152906001019060200180831161052157829003601f168201915b505050505081565b600160a060020a03338116600081815260066020908152604080832094871680845294909152808220859055909291907f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b9259085905190815260200160405180910390a350600192915050565b60408051908101604052600581527f4669786564000000000000000000000000000000000000000000000000000000602082015281565b600160a060020a0383166000908152600560205260408120548290108015906106395750600160a060020a0380851660009081526006602090815260408083203390941683529290522054829010155b80156106455750600082115b801561066a5750600160a060020a038316600090815260056020526040902054828101115b1561070757600160a060020a0380841660008181526005602081815260408084208054890181558a871680865282862080548b900390556006845282862033909816865296835281852080548a9003905593859052919052815486019091559091907feaf1c4b3ce0f4f62a2bae7eb3e68225c75f7e6ff4422073b7437b9a78d25f1709085905190815260200160405180910390a350600161070b565b5060005b9392505050565b600354905600a165627a7a72305820fbf226b8cc8053a2c155ec7ff4bf531afa015475932742dafc4fed8c9df2c4190029', gasEstimates: {"creation":[null,372000],"external":{"":23706,"Allowance(address,address)":23444,"Approve(address,uint256)":23444,"Balance()":23444,"BuyTokens(address,uint256)":null,"GetBalanceOfCountry(address)":23444,"Name()":null,"TotalColonisationTokens()":23444,"Transfer(address,uint256)":43431,"TransferFrom(address,address,uint256)":84797,"decimals()":23444,"symbol()":null},"internal":{}}});
+
+});
+__mainContext.__loadManagerInstance.execWhenReady(function() {
+  __mainContext.TokenRecipt = new EmbarkJS.Contract({abi: [{"constant":true,"inputs":[],"name":"Balance","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"payable":true,"stateMutability":"payable","type":"fallback"},{"anonymous":false,"inputs":[{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"amount","type":"uint256"}],"name":"RecievedEther","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"from","type":"address"},{"indexed":false,"name":"amount","type":"uint256"},{"indexed":false,"name":"newbalance","type":"uint256"}],"name":"NewEtherBalance","type":"event"}], address: undefined, code: '6060604052341561000f57600080fd5b61016a8061001e6000396000f3006060604052600436106100405763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ef678878114610113575b7f2115fd557368343a79c5fa055e19e2b5c97241cdaea4d5bbee16a2e15ba1ca70333460405173ffffffffffffffffffffffffffffffffffffffff909216825260208201526040908101905180910390a16000805434908101918290557f9a0461af4b66872c71a24989453c7b0d12bd6c19fc0bb8103c0c291c8f31235d91339190604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152602001935050505060405180910390a1005b341561011e57600080fd5b610126610138565b60405190815260200160405180910390f35b600054815600a165627a7a723058201e9987c6a75aa742ee58d5884a07eac0d23900167e36ee897b7dbcd060b261bc0029', gasEstimates: {"creation":[118,72400],"external":{"":23279,"Balance()":23237},"internal":{}}});
+
+});
 
 var whenEnvIsLoaded = function(cb) {
   if (typeof document !== 'undefined' && document !== null) {
@@ -62682,131 +62702,157 @@ whenEnvIsLoaded(function() {
 EmbarkJS.Messages.setProvider('whisper', {server: 'localhost', port: '8546', type: 'ws'});
 });
 
-var questions = [
-    {question:"Enter country name?"},
-    //{question:"What's your last name?"},
-    //{question:"What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/},
-    //{question:"Create your password", type: "password"}
-  ]
-  
-  /**********
-  
-    !!!!!
-    New Version: https://codepen.io/arcs/pen/rYXrNQ
-    !!!!!
-    
-    Credits for the design go to XavierCoulombeM
-    https://dribbble.com/shots/2510592-Simple-register-form
-    
-    This Pen uses no libraries except fonts and should 
-    work on all modern browsers
-    
-    The answers are stored in the `questions` array
-    with the key `value`. 
-  
-   **********/
-  
-  ;(function(){
-  
-    var tTime = 100  // transition transform time from #register in ms
-    var wTime = 200  // transition width time from #register in ms
-    var eTime = 1000 // transition width time from inputLabel in ms
-  
-    // init
-    // --------------
-    var position = 0
-  
-    putQuestion()
-  
-    progressButton.addEventListener('click', validate)
-    inputField.addEventListener('keyup', function(e){
-      transform(0, 0) // ie hack to redraw
-      if(e.keyCode == 13) validate()
+//Code for login/Registration
+
+
+
+//End code for login registration
+
+//Start Main UI code
+
+// use local storage
+// click of add to basket takes all info of that product
+// adds and stores in basket
+// refresh still stores items in basket
+// items can be removed from basket
+const product = document.querySelectorAll(".shopping__product");
+const menu = document.querySelector(".menu__container");
+const basket = document.querySelector(".basket");
+const shoppingArea = document.querySelector(".shopping");
+
+// point of local storage
+let basketItems = JSON.parse(localStorage.getItem("basketItems", basketItems)) || [];
+
+// product data
+const products = [
+  {
+    title: "Product",
+    imgSrc:
+      "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=73bb845a19c8ffd1e52def83c307ae57",
+    price: "£1001"
+  },
+  {
+    title: "Product",
+    imgSrc:
+      "https://images.unsplash.com/photo-1475173641776-50e70b746de8?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=924001d3b574be8a5fe2b762762e6c3e",
+    price: "£1002"
+  },
+  {
+    title: "Product",
+    imgSrc:
+      "https://images.unsplash.com/photo-1506638389872-eaf0cffb94bc?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=77b49b4280f51b1c02e521b9462e9660",
+    price: "£1003"
+  },
+  {
+    title: "Product",
+    imgSrc:
+      "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=7a0275305e292485c8b784b4f408f7c4",
+    price: "£1001"
+  },
+  {
+    title: "Product",
+    imgSrc:
+      "https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=3832e90087eca10453523207789e5d69",
+    price: "£1002"
+  },
+  {
+    title: "Product",
+    imgSrc:
+      "https://images.unsplash.com/photo-1472950755543-5293dbab893a?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=7ab9a10ddd5191a23c0d884f67f06eaf",
+    price: "£1003"
+  }
+];
+
+// create the html from data
+shoppingArea.innerHTML = products
+  .map((product, i) => {
+    return `
+       <div class='shopping__product'>
+    <h3 class='shopping__product__title'>${product.title + ' ' + (i+1)}</h3>
+    <img class = 'shopping__product__img' src="${product.imgSrc}">
+    <p class='shopping__product__price'>${product.price}</p>
+    <button class='shopping__product__button'>Add to basket</button>
+  </div>
+      `;
+  }).join("");
+
+// on click of button make copy of info
+const button = document.querySelectorAll(".shopping__product__button");
+button.forEach(item => item.addEventListener("click", getItem));
+
+function getItem(e) {
+  e.preventDefault();
+  // targets for html copies
+  let productTitle = $(e.target)
+    .closest(".shopping__product")
+    .find(".shopping__product__title")
+    .html();
+
+  let productImg = $(e.target)
+    .closest(".shopping__product")
+    .find(".shopping__product__img")
+    .attr("src");
+
+  let productPrice = $(e.target)
+    .closest(".shopping__product")
+    .find(".shopping__product__price")
+    .html();
+  //store in object
+  let items = {
+    productTitle,
+    productImg,
+    productPrice
+  };
+  // add to array
+  basketItems.push(items);
+  // update storage
+  localStorage.setItem("basketItems", JSON.stringify(basketItems));
+ // update dom with local storage basket items
+  createItem(basketItems, menu);
+  // refresh to display
+  location = location.href;
+}
+
+// create copy of item in basket function
+function createItem(products = [], position) {
+  position.innerHTML = products
+    .map((item, i) => {
+      return `
+            <div class ="basket__items" data-basket-count = "${i}"> 
+              <h3 class ="basket__items__title">${item.productTitle}</h3>
+              <img class ="basket__items__img" src = "${item.productImg}">
+              <p class ="basket__items__price">${item.productPrice}</p>
+          <svg width="24" height="24" viewBox="0 0 24 24" class ='bomb'>
+            <path d="M11.25,6A3.25,3.25 0 0,1 14.5,2.75A3.25,3.25 0 0,1 17.75,6C17.75,6.42 18.08,6.75 18.5,6.75C18.92,6.75 19.25,6.42 19.25,6V5.25H20.75V6A2.25,2.25 0 0,1 18.5,8.25A2.25,2.25 0 0,1 16.25,6A1.75,1.75 0 0,0 14.5,4.25A1.75,1.75 0 0,0 12.75,6H14V7.29C16.89,8.15 19,10.83 19,14A7,7 0 0,1 12,21A7,7 0 0,1 5,14C5,10.83 7.11,8.15 10,7.29V6H11.25M22,6H24V7H22V6M19,4V2H20V4H19M20.91,4.38L22.33,2.96L23.04,3.67L21.62,5.09L20.91,4.38Z"></path>
+          </svg>
+   <hr>
+          </div> `;
     })
-  
-    // functions
-    // --------------
-  
-    // load the next question
-    function putQuestion() {
-      inputLabel.innerHTML = questions[position].question
-      inputField.value = ''
-      inputField.type = questions[position].type || 'text'  
-      inputField.focus()
-      showCurrent()
-    }
-    
-    // when all the questions have been answered
-    function done() {
-      
-      // remove the box if there is no next question
-      register.className = 'close'
-      
-      // add the h1 at the end with the welcome text
-      var h1 = document.createElement('h1')
-      h1.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'))
-      setTimeout(function() {
-        register.parentElement.appendChild(h1)     
-        setTimeout(function() {h1.style.opacity = 1}, 50)
-      }, eTime)
-      
-    }
-  
-    // when submitting the current question
-    function validate() {
-  
-      // set the value of the field into the array
-      questions[position].value = inputField.value
-  
-      // check if the pattern matches
-      if (!inputField.value.match(questions[position].pattern || /.+/)) wrong()
-      else ok(function() {
-        
-        // set the progress of the background
-        progress.style.width = ++position * 100 / questions.length + 'vw'
-  
-        // if there is a new question, hide current and load next
-        if (questions[position]) hideCurrent(putQuestion)
-        else hideCurrent(done)
-               
-      })
-  
-    }
-  
-    // helper
-    // --------------
-  
-    function hideCurrent(callback) {
-      inputContainer.style.opacity = 0
-      inputProgress.style.transition = 'none'
-      inputProgress.style.width = 0
-      setTimeout(callback, wTime)
-    }
-  
-    function showCurrent(callback) {
-      inputContainer.style.opacity = 1
-      inputProgress.style.transition = ''
-      inputProgress.style.width = '100%'
-      setTimeout(callback, wTime)
-    }
-  
-    function transform(x, y) {
-      register.style.transform = 'translate(' + x + 'px ,  ' + y + 'px)'
-    }
-  
-    function ok(callback) {
-      register.className = ''
-      setTimeout(transform, tTime * 0, 0, 10)
-      setTimeout(transform, tTime * 1, 0, 0)
-      setTimeout(callback,  tTime * 2)
-    }
-  
-    function wrong(callback) {
-      register.className = 'wrong'
-      for(var i = 0; i < 6; i++) // shaking motion
-        setTimeout(transform, tTime * i, (i%2*2-1)*20, 0)
-      setTimeout(transform, tTime * 6, 0, 0)
-      setTimeout(callback,  tTime * 7)
-    }
-  
-  }())
+    .join("");
+}
+createItem(basketItems, menu);
+
+const basketBomb = document.querySelectorAll(".bomb");
+// on click of bomb delete basket item
+basketBomb.forEach(bItem =>
+  bItem.addEventListener("click", function() {
+    createItem(basketItems, menu);
+    // get the product number
+    let clickedIndex = $(this)
+      .closest(".basket__items")
+      .attr("data-basket-count");
+      // remove based on product index - click remove that item
+    basketItems.splice(clickedIndex, 1);
+    //  update the storage
+    localStorage.setItem("basketItems", JSON.stringify(basketItems));
+    // refresh the page to display
+    location = location.href;
+  })
+);
+// drop basket down
+basket.addEventListener("click", function() {
+  menu.classList.toggle("active-menu");
+});
+
+
+//End MainUI code

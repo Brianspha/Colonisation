@@ -1,0 +1,81 @@
+{
+  "contract_name": "TokenRecipt",
+  "code": "6060604052341561000f57600080fd5b61016a8061001e6000396000f3006060604052600436106100405763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ef678878114610113575b7f2115fd557368343a79c5fa055e19e2b5c97241cdaea4d5bbee16a2e15ba1ca70333460405173ffffffffffffffffffffffffffffffffffffffff909216825260208201526040908101905180910390a16000805434908101918290557f9a0461af4b66872c71a24989453c7b0d12bd6c19fc0bb8103c0c291c8f31235d91339190604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152602001935050505060405180910390a1005b341561011e57600080fd5b610126610138565b60405190815260200160405180910390f35b600054815600a165627a7a723058201e9987c6a75aa742ee58d5884a07eac0d23900167e36ee897b7dbcd060b261bc0029",
+  "runtime_bytecode": "6060604052600436106100405763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ef678878114610113575b7f2115fd557368343a79c5fa055e19e2b5c97241cdaea4d5bbee16a2e15ba1ca70333460405173ffffffffffffffffffffffffffffffffffffffff909216825260208201526040908101905180910390a16000805434908101918290557f9a0461af4b66872c71a24989453c7b0d12bd6c19fc0bb8103c0c291c8f31235d91339190604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152602001935050505060405180910390a1005b341561011e57600080fd5b610126610138565b60405190815260200160405180910390f35b600054815600a165627a7a723058201e9987c6a75aa742ee58d5884a07eac0d23900167e36ee897b7dbcd060b261bc0029",
+  "real_runtime_bytecode": "6060604052600436106100405763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630ef678878114610113575b7f2115fd557368343a79c5fa055e19e2b5c97241cdaea4d5bbee16a2e15ba1ca70333460405173ffffffffffffffffffffffffffffffffffffffff909216825260208201526040908101905180910390a16000805434908101918290557f9a0461af4b66872c71a24989453c7b0d12bd6c19fc0bb8103c0c291c8f31235d91339190604051808473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838152602001828152602001935050505060405180910390a1005b341561011e57600080fd5b610126610138565b60405190815260200160405180910390f35b600054815600a165627a7a723058201e9987c6a75aa742ee58d5884a07eac0d23900167e36ee897b7dbcd060b261bc0029",
+  "swarm_hash": "1e9987c6a75aa742ee58d5884a07eac0d23900167e36ee897b7dbcd060b261bc",
+  "gas_estimates": {
+    "creation": [
+      118,
+      72400
+    ],
+    "external": {
+      "": 23279,
+      "Balance()": 23237
+    },
+    "internal": {}
+  },
+  "function_hashes": {
+    "Balance()": "0ef67887"
+  },
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "Balance",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "RecievedEther",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "from",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "newbalance",
+          "type": "uint256"
+        }
+      ],
+      "name": "NewEtherBalance",
+      "type": "event"
+    }
+  ]
+}

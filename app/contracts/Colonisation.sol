@@ -37,15 +37,15 @@ contract TokenRecipt
     event NewEtherBalance(address from,uint amount,uint256 newbalance);
     function () payable
     {
-        emit RecievedEther(msg.sender,msg.value);
+        RecievedEther(msg.sender,msg.value);
         Balance += msg.value;//didnt know i could += XD new version of the compiler here we just adding the amount of ether we recieveing to our current balance
-        emit NewEtherBalance(msg.sender,msg.value,Balance);
+        NewEtherBalance(msg.sender,msg.value,Balance);
     }
 }
-contract ContriesInterFace 
+contract CountriesInterFace 
 {
 //registers a country name
-function RegisterCountry (bytes32 name,bytes32 continent,uint256 population,address mainResource,address Id) returns (bool sucess);
+function RegisterCountry(bytes32 name,bytes32 continent,bytes32 pass) returns (bool success);
 //Get Resource
 function GetResource (address id) constant returns(bytes32 name,uint256 count,bytes32 OriginCountry);
 }
@@ -57,7 +57,7 @@ contract LimitedColonisationLicenseToken is ColonisationInterface,TokenRecipt
     string public Name =""; //The User will specify what to name each token
     uint8 public constant decimals =18;
     uint256 UnitPrice=1;
-    uint256 TotalSupply =200; //assuming theres only 200 countries in the world
+    uint256 TotalSupply =200; //assuming theres only 200 countries in the world XD
     address owner; //owner of the each account
     mapping (address => uint256) Balances; //Balances for each country
     //each country approves the transfer of a certain amount of tokens from their account to another 
@@ -105,7 +105,7 @@ contract LimitedColonisationLicenseToken is ColonisationInterface,TokenRecipt
         {
             Balances[to] += amount;
             Balances[msg.sender] -= amount;
-            emit TransferEvent(owner,to,amount);
+             TransferEvent(owner,to,amount);
             success =true;
         }
         else
@@ -129,7 +129,7 @@ contract LimitedColonisationLicenseToken is ColonisationInterface,TokenRecipt
     Balances[from] -= amount;
     Allowed[from][msg.sender] -=amount;
     Balances[to] += amount;
-    emit TransferEvent(from,to,amount);
+    TransferEvent(from,to,amount);
     success =true;
      }        
      else 
@@ -142,7 +142,7 @@ contract LimitedColonisationLicenseToken is ColonisationInterface,TokenRecipt
     function Approve(address spender , uint256 amount) returns (bool success)
     {
         Allowed[msg.sender][spender] =amount;
-        emit Approval(msg.sender,spender,amount);
+        Approval(msg.sender,spender,amount);
         success =true;
     }
     //gets the maximum amount allowed for the spender 
@@ -158,7 +158,7 @@ contract LimitedColonisationLicenseToken is ColonisationInterface,TokenRecipt
         {
           TotalSupply= TotalSupply-amount;
           Balances[buyer]=amount;
-          msg.sender.transfer(UnitPrice);
+          msg.sender.transfer(msg.value);
           success=true;
         }
         else
@@ -167,17 +167,19 @@ contract LimitedColonisationLicenseToken is ColonisationInterface,TokenRecipt
         }
     }
 }
-    contract CountryContract is ContriesInterFace,LimitedColonisationLicenseToken
+    contract CountryContract is CountriesInterFace,LimitedColonisationLicenseToken
     {
      struct Country
      {
      bytes32 Name;//Name of country
      bytes32 Continent;////Which continent it belongs to
-     uint256 Population;//How many people live in the country
      uint256 Rank;// Position its in in comparison to other countries interms of resources
      address MainResource;//The main Resource that can be mined
      address Id;
-     mapping(address => Resource) Resources;//Resources that can be mined
+     bool Active;//indicates whether a record exists or not true if exists false if not
+     //Resources that can be mined
+     bytes32 Password;//Users Password
+     mapping(address => Resource) Resources;
      
     }   
     struct Resource
@@ -197,11 +199,17 @@ contract LimitedColonisationLicenseToken is ColonisationInterface,TokenRecipt
     {
         CountriesCount=0;
     }
-    function RegisterCountry(bytes32 name,bytes32 continent,uint256 population,address mainResource,address Id) returns (bool success)
+    function RegisterCountry(bytes32 name,bytes32 continent,bytes32 pass) returns (bool success)
     {
-        Country memory country=Country(name,continent,population,0,mainResource,Id);  
+        if(!Countries[msg.sender].Active){
+        Country memory country=Country(name,continent,0,0,msg.sender,true,pass);  
         CountriesCount =CountriesCount+1;//increase coutries by one
         success=true;
+        Countries[msg.sender]=country;
+        }
+        else{
+            success=false;
+        }
     }
     //Ensures that only the owner of the contract is allowed to add new resources for a country
     modifier AddResource(bytes32 name,address resourceId, uint256 estimateCounttobemined,address origin)
